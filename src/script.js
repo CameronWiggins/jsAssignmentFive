@@ -15,12 +15,3 @@ function getComputerChoice()
         return 'Scissors';
     }
 }
-
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
-alert(getCComputerChoise());
