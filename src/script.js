@@ -4,15 +4,15 @@ function getComputerChoice()
 
     if (rand === 1)
     {
-        return 'ROCK';
+        return 'Rock';
     }
     else if(rand === 2)
     {
-        return 'PAPER';
+        return 'Paper';
     }
     else
     {
-        return 'SCISSORS';
+        return 'Scissors';
     }
 }
 
@@ -20,11 +20,11 @@ function playRound(playerSelection, computerSelection)
 {
     if(playerSelection.toUpperCase() === 'ROCK')
     {
-        if (computerSelection === 'SCISSORS')
+        if (computerSelection.toUpperCase() === 'SCISSORS')
         {
             return 'You Win! Rock beats Scissors.'
         }
-        else if(computerSelection === 'PAPER')
+        else if(computerSelection.toUpperCase() === 'PAPER')
         {
             return 'You Lose! Paper beats Rock.'
         }
@@ -35,11 +35,11 @@ function playRound(playerSelection, computerSelection)
     }
     else if(playerSelection.toUpperCase() === 'PAPER')
     {
-        if (computerSelection === 'ROCK')
+        if (computerSelection.toUpperCase() === 'ROCK')
         {
             return 'You Win! Paper beats Rock.'
         }
-        else if(computerSelection === 'SCISSORS')
+        else if(computerSelection.toUpperCase() === 'SCISSORS')
         {
             return 'You Lose! Scissors beats Paper.'
         }
@@ -48,23 +48,38 @@ function playRound(playerSelection, computerSelection)
             return 'Its a tie, both of you chose Paper.'
         }
     }
-    else
+    else if(playerSelection.toUpperCase() === 'SCISSORS')
     {
-        if (computerSelection === 'PAPER')
+        if (computerSelection.toUpperCase() === 'PAPER')
         {
             return 'You Win! Scissors beats Paper.'
         }
-        else if(computerSelection === 'ROCK')
+        else if(computerSelection.toUpperCase() === 'ROCK')
         {
             return 'You Lose! Rock beats Scissors.'
         }
-        else
+        else 
         {
             return 'Its a tie, both of you chose Scissors.'
         }
     }
+    else
+    {
+        return "That not right at all! Enter Rock, Paper, or Scissors."
+    }
 }
 
-const playerSelection = "scissors";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function playGame()
+{
+    for (let i = 0; i < 5; i++)
+    {
+        const playerSelection = prompt("Rock, Paper, Scissors, Shoot!", "");
+        const computerSelection = getComputerChoice();
+
+        console.log("Player: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
+
+playGame();
