@@ -18,13 +18,13 @@ function getComputerChoice()
 
 function playRound(playerSelection, computerSelection)
 {
-    if(playerSelection.toUpperCase() === 'ROCK')
+    if(playerSelection === 'ROCK')
     {
-        if (computerSelection.toUpperCase() === 'SCISSORS')
+        if (computerSelection === 'SCISSORS')
         {
             return 'You Win! Rock beats Scissors.'
         }
-        else if(computerSelection.toUpperCase() === 'PAPER')
+        else if(computerSelection === 'PAPER')
         {
             return 'You Lose! Paper beats Rock.'
         }
@@ -33,13 +33,13 @@ function playRound(playerSelection, computerSelection)
             return 'Its a tie, both of you chose Rock.'
         }
     }
-    else if(playerSelection.toUpperCase() === 'PAPER')
+    else if(playerSelection === 'PAPER')
     {
-        if (computerSelection.toUpperCase() === 'ROCK')
+        if (computerSelection === 'ROCK')
         {
             return 'You Win! Paper beats Rock.'
         }
-        else if(computerSelection.toUpperCase() === 'SCISSORS')
+        else if(computerSelection === 'SCISSORS')
         {
             return 'You Lose! Scissors beats Paper.'
         }
@@ -48,13 +48,13 @@ function playRound(playerSelection, computerSelection)
             return 'Its a tie, both of you chose Paper.'
         }
     }
-    else if(playerSelection.toUpperCase() === 'SCISSORS')
+    else if(playerSelection === 'SCISSORS')
     {
-        if (computerSelection.toUpperCase() === 'PAPER')
+        if (computerSelection === 'PAPER')
         {
             return 'You Win! Scissors beats Paper.'
         }
-        else if(computerSelection.toUpperCase() === 'ROCK')
+        else if(computerSelection === 'ROCK')
         {
             return 'You Lose! Rock beats Scissors.'
         }
@@ -78,7 +78,7 @@ function playGame()
 
         console.log("Player: " + playerSelection);
         console.log("Computer: " + computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
+        console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
     }
 }
 
