@@ -24,4 +24,3 @@ alert(getCComputerChoise());
 alert(getCComputerChoise());
 alert(getCComputerChoise());
 alert(getCComputerChoise());
-alert(getCComputerChoise());
