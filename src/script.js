@@ -75,10 +75,13 @@ function playGame()
     {
         const playerSelection = prompt("Rock, Paper, Scissors, Shoot!", "");
         const computerSelection = getComputerChoice();
+        const play = playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase())
 
         console.log("Player: " + playerSelection);
         console.log("Computer: " + computerSelection);
-        console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
+        console.log(play);
+
+        alert(play);
     }
 }
 
